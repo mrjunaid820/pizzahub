@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pizza Hub | Fresh Pizza, Fresh Moments - 24/7 Delivery</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Order hot, fresh, artisan pizzas from Pizza Hub. 24/7 delivery, premium melted cheese, hand-tossed dough, and delicious deals. Order online now!" />
+  <meta name="keywords" content="pizza, online pizza delivery, 24 hours pizza delivery, best pizza, Pizza Hub, pepperoni pizza, pizza delivery Karachi" />
+  <meta property="og:title" content="Pizza Hub - Fresh Pizza, Fresh Moments" />
+  <meta property="og:description" content="24/7 Fresh Pizza Delivery with premium toppings and handmade artisan crust." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#e11d48" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <!-- 1. ANNOUNCEMENT TOP BAR -->
+  <aside class="top-bar" aria-label="Announcement">
+    <div class="top-bar-content">
+      <span class="top-badge delivery-status-badge">🔥 24 HOURS DELIVERY AVAILABLE</span>
+      <span id="announcement-text">🔥 24/7 Delivery Available! Free Delivery on orders above Rs. 2500 with code PIZZAFIRST!</span>
+      <div style="display: inline-flex; gap: 15px; margin-left: 10px;">
+        <a href="tel:+923001234567" class="phone-link" style="color: #fff; text-decoration: underline;">📞 Call Now</a>
+        <a href="https://wa.me/923001234567" class="whatsapp-link" target="_blank" style="color: #fff; text-decoration: underline;">💬 WhatsApp</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 2. STICKY NAVBAR -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="javascript:void(0)" class="logo" onclick="navigateToPage('home')">
+          <div class="logo-icon">🍕</div>
+          <div class="logo-text">PIZZA<span>HUB</span></div>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="javascript:void(0)" class="nav-link active" data-page="home" onclick="navigateToPage('home')">Home</a></li>
+          <li><a href="javascript:void(0)" class="nav-link" data-page="menu" onclick="navigateToPage('menu')">Menu</a></li>
+          <li><a href="javascript:void(0)" class="nav-link" data-page="offers" onclick="navigateToPage('offers')">Offers & Deals</a></li>
+          <li><a href="javascript:void(0)" class="nav-link" data-page="track-order" onclick="navigateToPage('track-order')">Track Order</a></li>
+          <li><a href="javascript:void(0)" class="nav-link" data-page="about" onclick="navigateToPage('about')">About Us</a></li>
+          <li><a href="javascript:void(0)" class="nav-link" data-page="contact" onclick="navigateToPage('contact')">Contact</a></li>
+        </ul>
+
+        <div class="header-actions">
+          <a href="tel:+923001234567" class="contact-pill phone-link">
+            <span>📞</span>
+            <span class="phone-link" data-text="true">+92 300 1234567</span>
+          </a>
+
+          <button type="button" class="cart-btn" aria-label="Shopping Cart" onclick="openCartDrawer()">
+            🛒
+            <span class="cart-badge">0</span>
+          </button>
+
+          <a href="/admin" class="btn btn-secondary btn-sm" style="font-size: 0.8rem; padding: 6px 12px;">
+            Admin Portal
+          </a>
+
+          <button type="button" class="mobile-menu-btn" onclick="openCartDrawer()" aria-label="Open Cart">
+            🍔
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       PAGE VIEWS (SPA NAVIGATION)
+       ====================================================================== -->
+
+  <!-- ==================== 1. HOME PAGE VIEW ==================== -->
+  <main id="home-page" class="page-view">
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-badge-container">
+              <span class="live-indicator delivery-status-badge">
+                <span class="pulse-dot"></span> 24/7 Delivery Available
+              </span>
+              <span style="font-size: 0.82rem; color: var(--accent-gold); font-weight: 700;">★ 4.9/5 RATED BY 10,000+ FOODIES</span>
+            </div>
+
+            <h1 class="hero-title">
+              Fresh Pizza,<br />
+              <span class="highlight">Fresh Moments.</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              Savor the crunch of slow-fermented Italian artisan dough, authentic San Marzano sauce, and overflowing premium mozzarella cheese—delivered piping hot to your doorstep 24 hours a day, 7 days a week.
+            </p>
+
+            <div class="hero-cta">
+              <button type="button" class="btn btn-primary" onclick="navigateToPage('menu')">
+                🍕 Order Now
+              </button>
+              <button type="button" class="btn btn-secondary" onclick="navigateToPage('menu')">
+                📜 View Menu
+              </button>
+              <button type="button" class="btn btn-secondary" onclick="navigateToPage('track-order')">
+                📍 Track Order
+              </button>
+            </div>
+
+            <div class="hero-stats">
+              <div class="stat-item">
+                <h4>30 Min</h4>
+                <p>Lightning Fast Delivery</p>
+              </div>
+              <div class="stat-item">
+                <h4>100%</h4>
+                <p>Pure Mozzarella Cheese</p>
+              </div>
+              <div class="stat-item">
+                <h4>24/7</h4>
+                <p>Midnight Deliveries</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FLOATING HERO PIZZA -->
+          <div class="hero-image-wrapper">
+            <div class="hero-pizza-glow"></div>
+            <img 
+              src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=80" 
+              alt="Delicious Fresh Pizza Hub" 
+              class="hero-pizza-img"
+            />
+            <div class="hero-floating-badge badge-1">
+              <span class="badge-icon">🧀</span>
+              <div class="badge-text">
+                <strong>Extra Cheesy</strong>
+                <span>Four Cheese Crust</span>
+              </div>
+            </div>
+            <div class="hero-floating-badge badge-2">
+              <span class="badge-icon">⚡</span>
+              <div class="badge-text">
+                <strong>24-Hour Hot Oven</strong>
+                <span>Always Freshly Baked</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POPULAR PIZZAS SECTION -->
+    <section class="container" style="padding: 80px 0;">
+      <div class="section-header">
+        <span class="section-tag">Chef's Recommendations</span>
+        <h2 class="section-title">Popular Pizzas & Best Sellers</h2>
+        <p class="section-subtitle">Our most-loved recipes handcrafted with premium ingredients.</p>
+      </div>
+      <div class="menu-grid" id="popular-pizzas-grid">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+      <div style="text-align: center; margin-top: 40px;">
+        <button type="button" class="btn btn-primary" onclick="navigateToPage('menu')">
+          Explore Full Pizza Menu →
+        </button>
+      </div>
+    </section>
+
+    <!-- 24/7 DELIVERY BANNER -->
+    <section class="container delivery-banner-section">
+      <div class="delivery-banner-card">
+        <div class="delivery-info">
+          <span style="background: rgba(255,255,255,0.2); padding: 4px 14px; border-radius: 9999px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">ROUND-THE-CLOCK SERVICE</span>
+          <h3 style="margin-top: 10px;">24 HOURS DELIVERY AVAILABLE</h3>
+          <p>Cravings strike at 3:00 AM? We've got you covered. Pizza Hub ovens never sleep. Hot, fresh, and crispy pizzas delivered safely to your location anytime day or night.</p>
+        </div>
+        <div>
+          <button type="button" class="btn btn-secondary" style="background: #ffffff; color: #991b1b; font-weight: 800;" onclick="navigateToPage('menu')">
+            Order Midnight Pizza 🍕
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE PIZZA HUB -->
+    <section class="container features-section">
+      <div class="section-header">
+        <span class="section-tag">Our Promise</span>
+        <h2 class="section-title">Why Choose Pizza Hub?</h2>
+        <p class="section-subtitle">We never compromise on dough fermentation, ingredient purity, and customer satisfaction.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-box">🌾</div>
+          <h3 class="feature-title">Slow-Rise Dough</h3>
+          <p class="feature-desc">Naturally fermented dough aged for 48 hours for an airy, digestible, and ultra-crisp crust.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-box">🧀</div>
+          <h3 class="feature-title">100% Real Cheese</h3>
+          <p class="feature-desc">Zero cheese analogues or synthetic oils. We only melt whole-milk buffalo mozzarella and aged cheddar.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-box">🍅</div>
+          <h3 class="feature-title">San Marzano Sauce</h3>
+          <p class="feature-desc">Rich vine-ripened tomatoes simmered with fresh sweet basil, garlic, oregano, and cold-pressed extra virgin olive oil.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-box">🚀</div>
+          <h3 class="feature-title">Thermal Bag Delivery</h3>
+          <p class="feature-desc">Riders equipped with heated insulated delivery bags guarantee oven-fresh warmth upon arrival.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECIAL OFFERS SECTION -->
+    <section class="offers-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Save Big</span>
+          <h2 class="section-title">Special Offers & Promo Deals</h2>
+          <p class="section-subtitle">Use these discount coupon codes at checkout to unlock instant discounts!</p>
+        </div>
+        <div class="offers-grid" id="offers-container">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- CUSTOMER REVIEWS -->
+    <section class="reviews-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Real Feedback</span>
+          <h2 class="section-title">What Our Pizza Lovers Say</h2>
+          <p class="section-subtitle">Verified reviews from pizza enthusiasts across the city.</p>
+        </div>
+        <div class="reviews-grid" id="reviews-container">
+          <!-- Rendered dynamically -->
+        </div>
+
+        <!-- LEAVE A REVIEW FORM -->
+        <div class="leave-review-box">
+          <h3 style="font-size: 1.35rem; color: #fff; margin-bottom: 6px; text-align: center;">Leave Your Feedback</h3>
+          <p style="color: var(--text-muted); font-size: 0.88rem; text-align: center; margin-bottom: 20px;">Had a delicious slice? Share your thoughts with us!</p>
+          <form id="review-form">
+            <div class="form-group">
+              <label class="form-label" for="review-name">Your Full Name</label>
+              <input type="text" id="review-name" class="form-input" placeholder="e.g. Ali Raza" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="review-rating">Rating (Stars)</label>
+              <select id="review-rating" class="form-select">
+                <option value="5">★★★★★ (5 Stars - Exceptional)</option>
+                <option value="4">★★★★☆ (4 Stars - Very Good)</option>
+                <option value="3">★★★☆☆ (3 Stars - Good)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="review-comment">Your Review</label>
+              <textarea id="review-comment" class="form-textarea" rows="3" placeholder="Tell us how much you loved the crust, cheese, and fast delivery..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit Customer Review</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== 2. MENU PAGE VIEW ==================== -->
+  <section id="menu-page" class="page-view hidden" style="padding: 60px 0;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Fresh From The Oven</span>
+        <h1 class="section-title">Our Complete Pizza Menu</h1>
+        <p class="section-subtitle">Select your favorite size: Small, Medium, Large, or Extra Large. Prices update automatically.</p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="category-tabs">
+        <button type="button" class="category-pill active" onclick="setCategory('All')">All Pizzas</button>
+        <button type="button" class="category-pill" onclick="setCategory('Best Sellers')">Best Sellers</button>
+        <button type="button" class="category-pill" onclick="setCategory('Special Pizzas')">Special Pizzas</button>
+        <button type="button" class="category-pill" onclick="setCategory('Cheesy')">Cheesy</button>
+        <button type="button" class="category-pill" onclick="setCategory('Spicy')">Spicy</button>
+        <button type="button" class="category-pill" onclick="setCategory('Classic')">Classic</button>
+        <button type="button" class="category-pill" onclick="setCategory('Gourmet')">Gourmet</button>
+        <button type="button" class="category-pill" onclick="setCategory('Veggie')">Veggie</button>
+        <button type="button" class="category-pill" onclick="setCategory('Sides & Appetizers')">Sides & Appetizers</button>
+        <button type="button" class="category-pill" onclick="setCategory('Desserts')">Desserts</button>
+      </div>
+
+      <!-- Menu Grid -->
+      <div class="menu-grid" id="menu-items-grid">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 3. OFFERS PAGE VIEW ==================== -->
+  <section id="offers-page" class="page-view hidden" style="padding: 60px 0;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Discounts & Vouchers</span>
+        <h1 class="section-title">Exclusive Deals & Offers</h1>
+        <p class="section-subtitle">Save big on your feast with our active coupons.</p>
+      </div>
+      <div class="offers-grid" id="offers-page-grid">
+        <!-- Populated on boot -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 4. CHECKOUT PAGE VIEW ==================== -->
+  <section id="checkout-page" class="page-view hidden" style="padding: 60px 0;">
+    <div class="container" style="max-width: 1040px;">
+      <div class="section-header" style="margin-bottom: 30px;">
+        <span class="section-tag">Express Checkout</span>
+        <h1 class="section-title">Finalize Your Order</h1>
+        <p class="section-subtitle">Enter your delivery details below to have your hot pizza on its way.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 40px; align-items: start;">
+        <!-- Left Column: Customer Form -->
+        <div style="background: var(--dark-card); border: 1px solid var(--dark-border); border-radius: var(--radius-lg); padding: 32px;">
+          <h3 style="font-size: 1.25rem; font-weight: 800; color: #fff; margin-bottom: 20px;">Customer & Delivery Details</h3>
+          
+          <form id="checkout-form">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-group">
+                <label class="form-label" for="checkout-name">Full Name *</label>
+                <input type="text" id="checkout-name" class="form-input" placeholder="e.g. Usman Ghani" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="checkout-phone">Mobile Number *</label>
+                <input type="tel" id="checkout-phone" class="form-input" placeholder="e.g. 0300 1234567" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="checkout-whatsapp">WhatsApp Number</label>
+              <input type="tel" id="checkout-whatsapp" class="form-input" placeholder="e.g. 0300 1234567" />
+              <label style="font-size: 0.8rem; color: var(--text-dim); margin-top: 6px; display: inline-flex; align-items: center; gap: 6px; cursor: pointer;">
+                <input type="checkbox" id="same-whatsapp-checkbox" /> Same as Mobile Number
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="checkout-email">Email Address (Optional)</label>
+              <input type="email" id="checkout-email" class="form-input" placeholder="For instant receipt & updates" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="checkout-address">Delivery Address (Street, House/Flat No.) *</label>
+              <textarea id="checkout-address" class="form-textarea" rows="2" placeholder="e.g. House 42-B, Street 7, Phase 5, DHA" required></textarea>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-group">
+                <label class="form-label" for="checkout-landmark">Nearby Landmark</label>
+                <input type="text" id="checkout-landmark" class="form-input" placeholder="e.g. Near Shell Pump" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="checkout-city">City</label>
+                <input type="text" id="checkout-city" class="form-input" value="Karachi" readonly />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="checkout-notes">Order Notes / Special Instructions</label>
+              <input type="text" id="checkout-notes" class="form-input" placeholder="e.g. Extra chilli flakes, call upon reaching gate" />
+            </div>
+
+            <div class="form-group" style="margin-top: 24px;">
+              <label class="form-label">Payment Method</label>
+              <div style="display: grid; gap: 10px;">
+                <label style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.04); border: 1px solid var(--dark-border); padding: 12px 16px; border-radius: var(--radius-md); cursor: pointer;">
+                  <input type="radio" name="payment_method" value="Cash on Delivery" checked />
+                  <div>
+                    <strong style="color: #fff; font-size: 0.95rem;">💵 Cash on Delivery (COD)</strong>
+                    <div style="font-size: 0.8rem; color: var(--text-dim);">Pay in cash when rider delivers at your doorstep</div>
+                  </div>
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.04); border: 1px solid var(--dark-border); padding: 12px 16px; border-radius: var(--radius-md); cursor: pointer;">
+                  <input type="radio" name="payment_method" value="Card on Delivery" />
+                  <div>
+                    <strong style="color: #fff; font-size: 0.95rem;">💳 Card on Delivery (POS Machine)</strong>
+                    <div style="font-size: 0.8rem; color: var(--text-dim);">Rider brings wireless card swiping machine</div>
+                  </div>
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.04); border: 1px solid var(--dark-border); padding: 12px 16px; border-radius: var(--radius-md); cursor: pointer;">
+                  <input type="radio" name="payment_method" value="Online Bank / EasyPaisa / JazzCash" />
+                  <div>
+                    <strong style="color: #fff; font-size: 0.95rem;">📱 EasyPaisa / JazzCash / Bank Transfer</strong>
+                    <div style="font-size: 0.8rem; color: var(--text-dim);">Direct account transfer instructions provided on WhatsApp</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <div style="margin-top: 30px;">
+              <button type="submit" id="confirm-order-btn" class="btn btn-primary btn-block" style="font-size: 1.1rem; padding: 16px;">
+                🍕 Confirm Order Now
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Right Column: Order Summary -->
+        <div id="checkout-summary-container" style="background: var(--dark-surface); border: 1px solid var(--dark-border); border-radius: var(--radius-lg); padding: 26px; position: sticky; top: 100px;">
+          <!-- Dynamically populated by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 5. TRACK ORDER PAGE VIEW ==================== -->
+  <section id="track-order-page" class="page-view hidden" style="padding: 60px 0;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Live Status</span>
+        <h1 class="section-title">Track Your Pizza Order</h1>
+        <p class="section-subtitle">Enter your unique Order ID (e.g. PH-XXXXX) below to see live kitchen and delivery progress.</p>
+      </div>
+
+      <div class="tracking-container">
+        <div style="display: flex; gap: 12px; margin-bottom: 30px;">
+          <input 
+            type="text" 
+            id="track-order-input" 
+            placeholder="Enter Order ID (e.g. PH-84291)" 
+            class="form-input" 
+            style="font-family: monospace; font-size: 1.1rem; text-transform: uppercase;"
+          />
+          <button type="button" class="btn btn-primary" onclick="trackOrderById()">
+            🔍 Track
+          </button>
+        </div>
+
+        <div id="track-result-box">
+          <div style="text-align: center; padding: 40px; color: var(--text-muted);">
+            <div style="font-size: 3rem; margin-bottom: 12px;">🛵</div>
+            <h4>Waiting for your Order ID</h4>
+            <p>Your unique Order ID was shown after placing your order and sent via WhatsApp/email.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 6. ABOUT US PAGE VIEW ==================== -->
+  <section id="about-page" class="page-view hidden" style="padding: 60px 0;">
+    <div class="container" style="max-width: 900px;">
+      <div class="section-header">
+        <span class="section-tag">Our Heritage</span>
+        <h1 class="section-title">About Pizza Hub</h1>
+        <p class="section-subtitle">Born from a passion for authentic wood-fired perfection and midnight craving satisfaction.</p>
+      </div>
+      <div style="background: var(--dark-card); border: 1px solid var(--dark-border); border-radius: var(--radius-lg); padding: 40px; line-height: 1.8; color: var(--text-muted);">
+        <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 12px;">Crafting Memorable Food Experiences</h3>
+        <p style="margin-bottom: 16px;">
+          At <strong>Pizza Hub</strong>, we believe every pizza tells a story. From selecting organic durum wheat flour to simmering San Marzano tomatoes with aromatic herbs, we obsess over every single component.
+        </p>
+        <p style="margin-bottom: 16px;">
+          Unlike mass-production franchises that freeze their crusts and use processed oils, our dough is mixed fresh daily and cold-fermented for up to 48 hours. When baked in our high-temperature ovens, the result is a delightfully airy, blistered crust with supreme crunch.
+        </p>
+        <h3 style="color: #fff; font-size: 1.4rem; margin: 30px 0 12px;">24/7 Delivery You Can Count On</h3>
+        <p style="margin-bottom: 16px;">
+          Whether it’s a family celebration at dinner, a gaming night with friends at 2:00 AM, or an early morning work shift, our kitchens run 24 hours a day with hot, insulated delivery directly to your door.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 7. CONTACT US PAGE VIEW ==================== -->
+  <section id="contact-page" class="page-view hidden" style="padding: 60px 0;">
+    <div class="container" style="max-width: 960px;">
+      <div class="section-header">
+        <span class="section-tag">Get In Touch</span>
+        <h1 class="section-title">Contact Pizza Hub</h1>
+        <p class="section-subtitle">We are always here to answer your questions, handle party catering, or take your orders.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+        <div style="background: var(--dark-card); border: 1px solid var(--dark-border); border-radius: var(--radius-lg); padding: 32px;">
+          <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 20px;">Direct Channels</h3>
+          
+          <div style="margin-bottom: 20px;">
+            <div style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; font-weight: 700;">Phone Helpline</div>
+            <a href="tel:+923001234567" class="phone-link" style="font-size: 1.15rem; font-weight: 700; color: #fff; display: block; margin-top: 4px;">
+              📞 +92 300 1234567
+            </a>
+          </div>
+
+          <div style="margin-bottom: 20px;">
+            <div style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; font-weight: 700;">WhatsApp Support</div>
+            <a href="https://wa.me/923001234567" target="_blank" class="whatsapp-link" style="font-size: 1.15rem; font-weight: 700; color: #25d366; display: block; margin-top: 4px;">
+              💬 Click to Chat on WhatsApp
+            </a>
+          </div>
+
+          <div style="margin-bottom: 20px;">
+            <div style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; font-weight: 700;">Official Email</div>
+            <a href="mailto:orders@pizzahub.com" class="email-link" style="font-size: 1.05rem; font-weight: 600; color: #fff; display: block; margin-top: 4px;">
+              ✉️ orders@pizzahub.com
+            </a>
+          </div>
+
+          <div>
+            <div style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; font-weight: 700;">Main Flagship Kitchen</div>
+            <p style="color: #fff; margin-top: 4px; font-size: 0.95rem;">Shop #14, Commercial Boulevard, Phase 5, DHA, Karachi</p>
+          </div>
+        </div>
+
+        <div style="background: var(--dark-surface); border: 1px solid var(--dark-border); border-radius: var(--radius-lg); padding: 32px;">
+          <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 16px;">Quick Message</h3>
+          <form onsubmit="event.preventDefault(); showToast('Message received! Our team will contact you shortly.'); this.reset();">
+            <div class="form-group">
+              <label class="form-label" for="contact-name">Your Name</label>
+              <input type="text" id="contact-name" class="form-input" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-email">Email or Phone</label>
+              <input type="text" id="contact-email" class="form-input" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-msg">Message</label>
+              <textarea id="contact-msg" class="form-textarea" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Send Inquiry</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 8. PRIVACY POLICY PAGE VIEW ==================== -->
+  <section id="privacy-page" class="page-view hidden" style="padding: 60px 0;">
+    <div class="container" style="max-width: 800px;">
+      <h1 class="section-title">Privacy Policy</h1>
+      <div style="background: var(--dark-card); border: 1px solid var(--dark-border); border-radius: var(--radius-lg); padding: 35px; color: var(--text-muted); line-height: 1.8;">
+        <p>At Pizza Hub, we respect your privacy. Customer contact data, mobile numbers, and delivery addresses are solely utilized to dispatch orders, contact you for delivery logistics, and provide transaction receipts.</p>
+        <p style="margin-top: 15px;">We never sell or disclose your personal records to third-party advertisers. Payment transactions are processed through encrypted channels and payment-on-delivery options.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 9. TERMS & CONDITIONS PAGE VIEW ==================== -->
+  <section id="terms-page" class="page-view hidden" style="padding: 60px 0;">
+    <div class="container" style="max-width: 800px;">
+      <h1 class="section-title">Terms & Conditions</h1>
+      <div style="background: var(--dark-card); border: 1px solid var(--dark-border); border-radius: var(--radius-lg); padding: 35px; color: var(--text-muted); line-height: 1.8;">
+        <p>Orders placed on Pizza Hub are prepared fresh upon order receipt. Prices and menu items are subject to change as configured by the restaurant management.</p>
+        <p style="margin-top: 15px;">Delivery time estimates (typically 30 minutes) may vary slightly during peak rush hours, extreme weather conditions, or distant delivery perimeters. For order cancellations or modifications, please contact support immediately upon ordering.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       INTERACTIVE CART SLIDE-OVER DRAWER
+       ====================================================================== -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay" onclick="if(event.target===this) closeCartDrawer();">
+    <div class="cart-drawer">
+      <div class="cart-header">
+        <h3>🛒 Your Pizza Cart</h3>
+        <button type="button" class="close-btn" onclick="closeCartDrawer()">✕</button>
+      </div>
+      <div class="cart-items-container" id="cart-items-list">
+        <!-- Rendered dynamically -->
+      </div>
+      <div class="cart-footer" id="cart-drawer-footer">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       ORDER CONFIRMATION MODAL
+       ====================================================================== -->
+  <div class="modal-overlay" id="order-confirmation-modal">
+    <div class="modal-content" id="confirmation-modal-content">
+      <!-- Injected by showOrderConfirmation() -->
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       FLOATING WHATSAPP BUTTON (BOTTOM-RIGHT)
+       ====================================================================== -->
+  <a href="https://wa.me/923001234567" target="_blank" class="floating-whatsapp whatsapp-link" aria-label="Chat on WhatsApp">
+    💬
+  </a>
+
+  <!-- ======================================================================
+       TOAST CONTAINER
+       ====================================================================== -->
+  <div id="toast-container"></div>
+
+  <!-- ======================================================================
+       FOOTER
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon">🍕</div>
+            <div class="logo-text">PIZZA<span>HUB</span></div>
+          </div>
+          <p>Fresh Pizza, Fresh Moments. Hand-tossed dough, imported Italian cheese, and 24/7 delivery right to your door.</p>
+          <div style="margin-top: 16px; display: flex; gap: 12px;">
+            <a href="tel:+923001234567" class="btn btn-secondary btn-sm phone-link">📞 Call</a>
+            <a href="https://wa.me/923001234567" target="_blank" class="btn btn-secondary btn-sm whatsapp-link">💬 WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="javascript:void(0)" onclick="navigateToPage('home')">Home</a></li>
+            <li><a href="javascript:void(0)" onclick="navigateToPage('menu')">Our Menu</a></li>
+            <li><a href="javascript:void(0)" onclick="navigateToPage('offers')">Deals & Coupons</a></li>
+            <li><a href="javascript:void(0)" onclick="navigateToPage('track-order')">Track Your Order</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="javascript:void(0)" onclick="navigateToPage('about')">About Us</a></li>
+            <li><a href="javascript:void(0)" onclick="navigateToPage('contact')">Contact Support</a></li>
+            <li><a href="javascript:void(0)" onclick="navigateToPage('privacy')">Privacy Policy</a></li>
+            <li><a href="javascript:void(0)" onclick="navigateToPage('terms')">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Restaurant Hours</h4>
+          <p style="color: #34d399; font-weight: 700; margin-bottom: 8px;">🔥 24 HOURS / 7 DAYS OPEN</p>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 12px;">Midnight Delivery Hotline:<br /><strong class="phone-link" data-text="true">+92 300 1234567</strong></p>
+          <a href="/admin" style="font-size: 0.8rem; color: var(--accent-gold); text-decoration: underline;">🔒 Staff / Admin Login</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Pizza Hub. All rights reserved. Commercial Pizza Platform.</div>
+        <div>Made with ❤️ for Pizza Enthusiasts</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/app.js"></script>
+</body>
+</html>
